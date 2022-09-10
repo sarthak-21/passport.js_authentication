@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+<div class="box">
+    <span class="page-heading">Login</span>
+    <% if(messages.error) { %>
+        <%= messages.error %>
+    <% } %>
+    <form class="form" action="/login" method="post">
+        <div class="form-div">
+            <label class="form-label" for="email">Email address <span class="red">*</span></label>
+            <input class="form-text" type="email" id="email" name="email" required>
+        </div>
+        <div class="form-div">
+            <label class="form-label" for="password">Password <span class="red">*</span></label>
+            <input class="form-text" type="password" id="password" name="password" required>
+        </div>
+        <button class="submit-button" type="submit">Login</button>
+    </form>
+    <div class="followed-text">
+        <span class="already">Don't have an account?</span>
+        <a class="link" href="/register">Register</a>
+    </div>
+</div>
+<%- include("partials/footer"); -%>
